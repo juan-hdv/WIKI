@@ -12,17 +12,26 @@
         <div class="row">
             <div class="sidebar col-lg-2 col-md-3">
                 <h2>Wiki</h2>
-                <form>
+                <form action="{% url 'pageSearch' %}" method="post">
+                    {% csrf_token %}
                     <input class="search" type="text" name="q" placeholder="Search Encyclopedia">
+                    <input type="submit" value="search">
+                    <small>
+                        <ul>
+                        <li>Go to entry for a case sensitve match.</li>
+                        <li>Show search results for case insentive maches</li>
+                        </ul>
+                    </small>
                 </form>
+                <hr>
                 <div>
                     <a href="{% url 'index' %}">Home</a>
                 </div>
                 <div>
-                    Create New Page
+                    <a href="{% url 'pageNew' %}">Create New Page</a>
                 </div>
                 <div>
-                    Random Page
+                    <a href="{% url 'pageRandom' %}">Random Page</a>
                 </div>
                 {% block nav %}
                 {% endblock %}
