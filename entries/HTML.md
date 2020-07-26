@@ -8,4 +8,6 @@ HTML is a markup language that can be used to define the structure of a web page
 * links
 * and more!
 
+HTML is usually complemented with [CSS](/wiki/CSS)
+
 The most recent major version of HTML is HTML5.

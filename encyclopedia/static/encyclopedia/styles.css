@@ -17,6 +17,27 @@ textarea {
     width: 80%;
 }
 
+small {
+  font-size: 0.8em;
+  color: navy;
+}
+
+a.anchorEdit:link, a.anchorEdit:visited {
+  font-size: 0.8em;
+  background-color: #f44336;
+  color: white;
+  margin: 2px 0;
+  padding: 0px 5px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  cursor: pointer;
+}
+
+a:.anchorEdithover, a.anchorEdit:active {
+  background-color: red;
+}
+
 .main {
     padding: 10px;
 }
@@ -35,4 +56,11 @@ textarea {
 
 .sidebar h2 {
     margin-top: 5px;
+}
+
+.edit {
+    background-image: url("edit.png");
+    height: 32px;
+    background-position: center;
+    background-repeat: no-repeat;
 }

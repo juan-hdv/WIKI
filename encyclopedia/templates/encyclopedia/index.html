@@ -5,12 +5,18 @@
 {% endblock %}
 
 {% block body %}
-    <h1>All Pages</h1>
+    <h1>{{ pageTitle }}</h1>
 
     <ul>
+    	{% if entries %}
         {% for entry in entries %}
-            <li>{{ entry }}</li>
+            <li>
+                <a class="anchorEdit" href="{% url 'pageEdit' entry %}">Edit</a>&nbsp;&nbsp;&nbsp;
+                <a href="{% url 'pageShow' entry %}">{{ entry }}</a>
+            </li>
         {% endfor %}
+        {% else %}
+            <h2>Not found</h2>
+        {% endif %}
     </ul>
-
 {% endblock %}
